@@ -9,7 +9,7 @@ document.getElementById('btn').addEventListener('click', function() {
     // Clear previous figure
     figureContainer.innerHTML = '';
 
-    if (figureType === 'square' || figureType === 'circle') {
+    if (figureType === 'square' || figureType === 'squareRounded' || figureType === 'circle') {
         if (!width || !height) {
             alert('Please enter width and height.');
             return;
@@ -43,6 +43,13 @@ document.getElementById('btn').addEventListener('click', function() {
     height: ${height}px;
     background-color: ${color};
 }`;
+        } else if (figureType === 'squareRounded') {
+            preElement.innerHTML = `.example-class { // You can change the class name
+width: ${width}px;
+height: ${height}px;
+background-color: ${color};
+border-radius: 30%;
+        }`;
         } else {
             preElement.innerHTML = `.example-class { // You can change the class name
     width: ${width}px;

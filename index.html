@@ -11,11 +11,13 @@
     <h1 title="Warning: don't click me" onclick="secretFunction()">Figure Style Generatetor (FSG)</h1>
 </header>
 <body>
+    <noscript>Waring: Figure Style Generatetor (FSG) can't working without JavaScript.</noscript>
     <div id="figure"></div>
     <br>
     <select id="figureType">
         <option>Figure type</option>
         <option value="square">Square</option>
+        <option value="squareRounded">Square (rounded border)</option>
         <option value="circle">Circle</option>
     </select>
     <br>
@@ -23,7 +25,7 @@
     <input type="number" id="height" min="10" max="100" placeholder="Height">
     <br>
     <input type="color" id="color">
-    <button id="btn">Generate</button>
+    <button id="btn" title="Generate">Generate</button>
     <br>
     <code id="css-code"></code>
     <script src="https://user14923929.github.io/FSG/assets/js/figure.js"></script>
